@@ -28,6 +28,19 @@ class UserViewSet(ModelViewSet):
     queryset = User.objects.all()
     serializer_class = UserSerializer
 
+from rest_framework import generics
+from rest_framework.response import Response
+from django.contrib.auth.models import User
+from .serializers import UserSerializer
+
+class UserRegistrationView(generics.CreateAPIView):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
+
+    def perform_create(self, serializer):
+        serializer.save()
+
+
 class PlayerListAPIView(ListAPIView):
     queryset = Player.objects.all()
     serializer_class = PlayerSerializer

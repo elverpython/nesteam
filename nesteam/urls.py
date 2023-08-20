@@ -31,6 +31,7 @@ urlpatterns = [
     # path('games/', games_list, name='games'),
     # path('studios/', studios_list, name='studios'),
     path('games/', GamesView.as_view(), name='games'),
+    path('games-search/', GamesSearchView.as_view(), name='games-search'),
     path('gamefilter/', GameListAPIView.as_view(), name='gamefilter'),
     path('game-detail/<int:pk>/', game_info, name='games-info'),
     path('genre-detail/<int:pk>/', genre_info, name='genre-info'),

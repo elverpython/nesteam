@@ -9,5 +9,7 @@ class GameFilter(filters.FilterSet):
     year__lt = django_filters.NumberFilter(field_name='year', lookup_expr='lt')
 
     class Meta:
+
+
         model = Game
         fields = ['name']
