@@ -10,6 +10,6 @@ collection_router.register(r'', CollectionViewSet)
 
 urlpatterns = [
     path('', include(collection_router.urls)),
-    path('collecfilter/', CollectionListAPIView.as_view(), name='collecfilter'),
+    # path('collections/', CollectionListAPIView.as_view(), name='collections'),
 
 ]
