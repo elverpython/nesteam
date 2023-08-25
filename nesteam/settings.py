@@ -148,20 +148,24 @@ REST_FRAMEWORK = {
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ],
 
+    # 'DEFAULT_PERMISSION_CLASSES': [
+    #     'rest_framework.permissions.IsAuthenticated',
+    # ]
+
 }
 
-DJOSER = {
-    'LOGIN_FIELD': 'username',
-    'USER_CREATE_PASSWORD_RETYPE': True,
-    'USERNAME_CHANGED_EMAIL_CONFIRMATION': True,
-    'PASSWORD_CHANGED_EMAIL_CONFIRMATION': True,
-    'SEND_CONFIRMATION_EMAIL': True,
-    'SET_PASSWORD_RETYPE': True,
-    'SET_USERNAME_RETYPE': True,
-    'USER_ID_FIELD': 'id',
-    'HIDE_USERS': False,
-    'PERMISSIONS': {
-        'user_list': ['rest_framework.permissions.IsAdminUser'],
-    },
-    'JWT_AUTH_COOKIE': 'access_token',
-}
+# DJOSER = {
+#     'LOGIN_FIELD': 'username',
+#     'USER_CREATE_PASSWORD_RETYPE': True,
+#     'USERNAME_CHANGED_EMAIL_CONFIRMATION': True,
+#     'PASSWORD_CHANGED_EMAIL_CONFIRMATION': True,
+#     'SEND_CONFIRMATION_EMAIL': True,
+#     'SET_PASSWORD_RETYPE': True,
+#     'SET_USERNAME_RETYPE': True,
+#     'USER_ID_FIELD': 'id',
+#     'HIDE_USERS': False,
+#     'PERMISSIONS': {
+#         'user_list': ['rest_framework.permissions.IsAdminUser'],
+#     },
+#     'JWT_AUTH_COOKIE': 'access_token',
+# }
